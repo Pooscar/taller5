@@ -5,7 +5,7 @@
  */
 package Singleton;
 
-import ChainOfResponsibility.Manejador;
+import ChainOfResponsibility.ManejadorDinero;
 import Patrones.Account;
 import java.util.ArrayList;
 import java.util.Currency;
@@ -14,11 +14,11 @@ import java.util.Locale;
 public class AtmUK {
     protected final Currency currency=Locale.UK;
     protected double dinero = 0;
-    protected ArrayList <Manejador> manejadores; // Cada manejador puede entregar dinero de una sola denominación
+    protected ArrayList <ManejadorDinero> manejadores; // Cada manejador puede entregar dinero de una sola denominación
 
     // -----------------
     public AtmUK() {
-      manejadores = new ArrayList<Manejador>();
+      manejadores = new ArrayList<ManejadorDinero>();
     }
     // -----------------
     public double getTotal() {
@@ -37,10 +37,10 @@ public class AtmUK {
         // Todo: Sólo se puede depositar billetes de una sola denominación y agregarse al manejador correspondiente
     }
 
-    public void addManejador(Manejador m){
+    public void addManejador(ManejadorDinero m){
         manejadores.add(m);
     }
-    public Manejador removeManejador(int i){
+    public ManejadorDinero removeManejador(int i){
         return manejadores.remove(i);
     }
 

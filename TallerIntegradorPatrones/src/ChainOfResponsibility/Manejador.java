@@ -5,27 +5,15 @@
  */
 package ChainOfResponsibility;
 
-public class Manejador
-{
-    private Manejador next; 
-    protected int monto;
-    protected int denominacion;
-
-    public Manejador(int monto, int denominacion){
-        this.monto = monto; // Total de billetes
-        this.denominacion = denominacion; // Valor de cada billete
-    }
-
-    public int getMonto(){ return monto; }
-    public int getDenominacion(){ return denominacion; }
-    public void setMonto(int monto){ this.monto = monto; }
-
-    public boolean retirar(int monto){
-        // Implementar
-        return false;
-    }
-    public boolean depositar(int monto, int denominacion){
-        // Implementar
-        return false;
-    }
+/**
+ *
+ * @author allisonbarrezueta
+ */
+public interface Manejador {
+    
+    public void Manejador(int n, double denominacion);
+    public void setNext(Manejador manejador);
+    public boolean retirar(double monto);
+    public boolean depositar(int n, double denominacion);
+    
 }
