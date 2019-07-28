@@ -5,8 +5,9 @@
  */
 package Patrones;
 
-import ChainOfResponsibility.Manejador;
 import ChainOfResponsibility.ManejadorDinero;
+import java.util.Scanner;
+
 
 public class Main
 {
@@ -36,6 +37,48 @@ public class Main
         // Menú principal para seleccionar una de las 10 cuentas solo con el id
         
         // Mostrar el menú para realizar transacciones en el cajero automático
+        
+        Scanner scan = new Scanner(System.in);
+        int cuenta;
+        int transaccion;
+        boolean seguirCajero = true;
+        boolean seguirCuenta = true;
+        
+        while (seguirCajero) {
+            System.out.println("\t\tMENU PRINCIPAL\n\n");
+            System.out.println("Escriba su numero de cuenta: ");
+            cuenta = scan.nextInt();
+            //BUSCAR LA CUENTA
+            
+            while(seguirCuenta){
+                System.out.println("\t\tMENU\n");
+                System.out.println("Realizar una transaccion:\n\n"
+                        + "1. Ver estado actual de la cuenta"
+                        + "2. Depositar dinero"
+                        + "3. Retirar dinero"
+                        + "4. Salir");
+                
+                transaccion = scan.nextInt();
+                
+                switch (transaccion) {
+                    case 1:
+                        
+                        break;
+                    case 2:
+                        
+                        break;
+                    case 3:
+                        
+                        break;
+                    case 4:
+                        
+                        break;
+                    default:
+                        System.out.println("Error! Escoga una opcion correcta");;
+                }
+                
+            }
+        }
     }
 
     
