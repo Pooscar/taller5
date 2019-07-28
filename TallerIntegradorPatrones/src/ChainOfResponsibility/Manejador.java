@@ -14,6 +14,6 @@ public interface Manejador {
     public void Manejador(int n, double denominacion);
     public void setNext(Manejador manejador);
     public boolean retirar(double monto);
-    public boolean depositar(int n, double denominacion);
+    public boolean depositar(double n, double denominacion);
     
 }
