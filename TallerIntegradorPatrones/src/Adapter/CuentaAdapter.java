@@ -31,17 +31,13 @@ public class CuentaAdapter implements Cuenta {
     @Override
     public boolean Retirar(double monto) {
         String res = cuenta.withdraw(monto);
-        if (res es el mensaje de error){
-            return false;
-        }else{return true;}
+        return !res.contains("Error");
     }
 
     @Override
     public boolean Depositar(int cantidad, double tipoBillete) {
-        String res= cuenta.deposit(tipoBillete);
-        if (res es el mensaje de error){
-            return false;
-        }else{return true;}
+        String res= cuenta.deposit(cantidad);
+        return true;
     }
    
    
