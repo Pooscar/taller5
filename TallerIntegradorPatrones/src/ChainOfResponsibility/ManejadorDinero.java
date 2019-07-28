@@ -39,9 +39,13 @@ public class ManejadorDinero implements Manejador
         
         return true;
     }
-
+    
+    public boolean depositar(double monto) {
+        return depositar(monto, this.denominacion);
+    }
+    
     @Override
-    public boolean depositar(int n, double denominacion) {
+    public boolean depositar(double n, double denominacion) {
         if (n>0 && denominacion > 0){
             double monto = n*denominacion;
             if (this.denominacion == denominacion){

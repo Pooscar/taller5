@@ -9,10 +9,13 @@ public final class Account {
     private Locale locale;
     private double amount;
     private Currency c;
+
+    public Account() {
+    }
      
     public Account(int id, double amount) {
         this.id = id;
-        this.locale = Locale.UK;
+        this.locale = Locale.US;
         this.amount = amount;
         this.c = Currency.getInstance(locale);
     }
